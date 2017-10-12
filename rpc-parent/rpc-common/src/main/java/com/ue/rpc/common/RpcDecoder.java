@@ -1,4 +1,4 @@
-package com.ue.common;
+package com.ue.rpc.common;
 
 import java.util.List;
 
@@ -7,18 +7,18 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 
 /**
- * RPC½âÂëÆ÷
+ * RPCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @Title: RpcDecoder.java 
  * @Package com.ue.common 
  * @author yangyue   
- * @date 2017Äê10ÔÂ11ÈÕ ÏÂÎç11:45:30 
+ * @date 2017ï¿½ï¿½10ï¿½ï¿½11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:45:30 
  * @version V1.0
  */
 public class RpcDecoder extends ByteToMessageDecoder{
 
 	private Class<?> generiClass;
 	
-	//¹¹Ôìº¯Êý´«Èë·´ÐòÁÐ»¯µÄclass
+	//ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ë·´ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½class
 	public RpcDecoder(Class<?> generClass) {
 		this.generiClass = generClass;
 	}
@@ -26,7 +26,7 @@ public class RpcDecoder extends ByteToMessageDecoder{
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in,
 			List<Object> out) throws Exception {
-		//nettyÖÐ ÊäÈë²ÎÊýÐ¡ÓÚ4ÎÞÐ§
+		//nettyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½4ï¿½ï¿½Ð§
 		if (in.readableBytes() < 4) {
 			return;
 		}
@@ -39,10 +39,10 @@ public class RpcDecoder extends ByteToMessageDecoder{
 			in.resetReaderIndex();
 		}
 		
-		//½«ByteBuf×ª»¯Îªbyte[]
+		//ï¿½ï¿½ByteBuf×ªï¿½ï¿½Îªbyte[]
 		byte[] data = new byte[dataLength];
 		in.readBytes(data);
-		//data×ª»»³Éobject
+		//data×ªï¿½ï¿½ï¿½ï¿½object
 		Object obj = SerializationUtil.deserialize(data, generiClass);
 		out.add(obj);
 	}

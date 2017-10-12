@@ -1,4 +1,4 @@
-package com.ue.common;
+package com.ue.rpc.common;
 
 /**
  * 封装 RPC 响应

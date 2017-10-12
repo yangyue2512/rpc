@@ -1,22 +1,22 @@
-package com.ue.common;
+package com.ue.rpc.common;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 
 /**
- * RPC ±àÂëÆ÷
+ * RPC ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @Title: RpcEncoder.java 
  * @Package com.ue.common 
  * @author yangyue   
- * @date 2017Äê10ÔÂ11ÈÕ ÏÂÎç11:59:41 
+ * @date 2017ï¿½ï¿½10ï¿½ï¿½11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:59:41 
  * @version V1.0
  */
 public class RpcEncoder extends MessageToByteEncoder<Object> {
 
 	private Class<?> genericClass;
 
-	// ¹¹Ôìº¯Êý´«ÈëÏò·´ÐòÁÐ»¯µÄclass
+	// ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½class
 	public RpcEncoder(Class<?> genericClass) {
 		this.genericClass = genericClass;
 	}
@@ -24,7 +24,7 @@ public class RpcEncoder extends MessageToByteEncoder<Object> {
 	@Override
 	public void encode(ChannelHandlerContext ctx, Object inob, ByteBuf out)
 			throws Exception {
-		//ÐòÁÐ»¯
+		//ï¿½ï¿½ï¿½Ð»ï¿½
 		if (genericClass.isInstance(inob)) {
 			byte[] data = SerializationUtil.serialize(inob);
 			out.writeInt(data.length);

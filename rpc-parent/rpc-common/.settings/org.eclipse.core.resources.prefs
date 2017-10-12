@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/main/java/com/ue/common/RpcResponse.java=UTF-8
-encoding//src/main/java/com/ue/common/SerializationUtil.java=UTF-8
+encoding//src/main/java/com/ue/rpc/common/RpcResponse.java=UTF-8
+encoding//src/main/java/com/ue/rpc/common/SerializationUtil.java=UTF-8
+encoding/<project>=UTF-8

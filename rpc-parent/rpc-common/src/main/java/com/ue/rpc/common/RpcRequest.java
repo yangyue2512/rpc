@@ -1,12 +1,12 @@
-package com.ue.common;
+package com.ue.rpc.common;
 
 /**
- * ·â×° RPC ÇëÇó
- * ·â×°·¢ËÍµÄobjectµÄ·´ÉäÊôÐÔ
+ * ï¿½ï¿½×° RPC ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½×°ï¿½ï¿½ï¿½Íµï¿½objectï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @Title: RpcRequest.java 
  * @Package com.ue.common 
  * @author yangyue   
- * @date 2017Äê10ÔÂ12ÈÕ ÉÏÎç12:01:52 
+ * @date 2017ï¿½ï¿½10ï¿½ï¿½12ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½12:01:52 
  * @version V1.0
  */
 public class RpcRequest {

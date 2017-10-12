@@ -1,4 +1,4 @@
-package com.ue.common;
+package com.ue.rpc.common;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
