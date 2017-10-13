@@ -1,13 +1,11 @@
 package com.ue.rpc.common;
 
 /**
- * ��װ RPC ����
- * ��װ���͵�object�ķ�������
- * @Title: RpcRequest.java 
- * @Package com.ue.common 
- * @author yangyue   
- * @date 2017��10��12�� ����12:01:52 
- * @version V1.0
+ * RPC请求数据模型
+ * @ClassName: RpcRequest 
+ * @author yangyue
+ * @date 2017年10月13日 上午10:28:20 
+ *
  */
 public class RpcRequest {
 	
