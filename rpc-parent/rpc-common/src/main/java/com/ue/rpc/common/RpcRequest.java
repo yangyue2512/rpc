@@ -1,10 +1,10 @@
 package com.ue.rpc.common;
 
 /**
- * RPCè¯·æ±‚æ•°æ®æ¨¡å‹
+ * ÇëÇó²ÎÊıµÄ·â×°
  * @ClassName: RpcRequest 
  * @author yangyue
- * @date 2017å¹´10æœˆ13æ—¥ ä¸Šåˆ10:28:20 
+ * @date 2017Äê10ÔÂ17ÈÕ ÏÂÎç2:21:34 
  *
  */
 public class RpcRequest {

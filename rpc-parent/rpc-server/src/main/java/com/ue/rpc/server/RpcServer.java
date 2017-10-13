@@ -61,7 +61,6 @@ public class RpcServer implements ApplicationContextAware, InitializingBean{
 	/**
 	 * 通过注解，获取标注了rpc服务注解的业务类的-----接口和impl对象，将它放到handlerMap中 
 	 */
-	@Override
 	public void setApplicationContext(ApplicationContext ctx)
 			throws BeansException {
 
@@ -85,7 +84,6 @@ public class RpcServer implements ApplicationContextAware, InitializingBean{
 	 * 2.根据request中的参数，让RpcHandler从handlerMap中找到对应的业务实现，调用指定方法，获取返回结果
 	 * 3.待业务调用结果封装到response并序列化后发往客户端
 	 */
-	@Override
 	public void afterPropertiesSet() throws Exception {
 
 		EventLoopGroup bossGroup = new NioEventLoopGroup();

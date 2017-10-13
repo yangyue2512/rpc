@@ -1,10 +1,11 @@
 package com.ue.rpc.server.client;
 
+import com.ue.client.server.service.HelloService;
 import com.ue.client.server.service.Person;
 import com.ue.rpc.server.RpcService;
 
 @RpcService(value = HelloService.class)
-public class HelloService implements com.ue.client.server.service.HelloService{
+public class HelloServiceImpl implements HelloService{
 
 	public String hello(String name) {
 		System.out.println("已经调用服务端接口实现，业务处理结果为：");

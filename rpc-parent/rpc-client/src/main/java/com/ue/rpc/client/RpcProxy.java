@@ -5,9 +5,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.UUID;
 
-import org.apache.zookeeper.server.Request;
-
 import com.ue.rpc.common.RpcRequest;
+import com.ue.rpc.common.RpcResponse;
 import com.ue.rpc.registry.ServiceDiscovery;
 
 /**
@@ -62,10 +61,18 @@ public class RpcProxy {
 				String[] array = serverAddress.split(":");
 				String host = array[0];
 				int port = Integer.parseInt(array[1]);
+				//创建Netty实现的RpcClient 链接服务器
 				
+				RpcClient client = new RpcClient(host, port);
+				//通过netty向服务端发送请求
+				RpcResponse response = client.send(rpcRequest);
 				
-				
-				return null;
+				//返回数据
+				if(response.isError()) {
+					throw response.getError();
+				} else {
+					return response.getResult();
+				}
 			}
 		});
 	}

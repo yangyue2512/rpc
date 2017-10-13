@@ -39,6 +39,20 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         
+         <!-- RPC client -->
+        <dependency>
+            <groupId>com.ue</groupId>
+            <artifactId>rpc-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
+          <!-- RPC client server interface -->
+        <dependency>
+            <groupId>com.ue</groupId>
+            <artifactId>rpc-client-server-interface</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
     </dependencies>
   
   

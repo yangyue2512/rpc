@@ -6,17 +6,17 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 /**
- * RPC解码器
+ * 解码
  * @ClassName: RpcDecoder 
  * @author yangyue
- * @date 2017年10月13日 上午10:30:01 
+ * @date 2017年10月17日 下午2:20:47 
  *
  */
 public class RpcDecoder extends ByteToMessageDecoder {
 
     private Class<?> genericClass;
 
-	// 构造函数传入向反序列化的class
+	// 鏋勯�鍑芥暟浼犲叆鍚戝弽搴忓垪鍖栫殑class
     public RpcDecoder(Class<?> genericClass) {
         this.genericClass = genericClass;
     }
@@ -34,10 +34,10 @@ public class RpcDecoder extends ByteToMessageDecoder {
         if (in.readableBytes() < dataLength) {
             in.resetReaderIndex();
         }
-        //将ByteBuf转换为byte[]
+        //灏咮yteBuf杞崲涓篵yte[]
         byte[] data = new byte[dataLength];
         in.readBytes(data);
-        //将data转换成object
+        //灏哾ata杞崲鎴恛bject
         Object obj = SerializationUtil.deserialize(data, genericClass);
         out.add(obj);
     }

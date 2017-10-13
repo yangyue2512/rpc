@@ -81,7 +81,7 @@ public class ServiceDiscovery {
 			//循环子节点
 			for (String node : nodeList) {
 				//获取节点中的服务器地址
-				byte[] bytes = zk.getData(Constant.ZK_DATA_PATH + "/" + node, false, null);
+				byte[] bytes = zk.getData(Constant.ZK_REGISTRY_PATH + "/" + node, false, null);
 				//存储到list中
 				dataList.add(new String(bytes));
 			}
