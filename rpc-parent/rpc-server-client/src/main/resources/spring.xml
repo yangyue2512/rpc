@@ -9,9 +9,11 @@
        
        <context:component-scan base-package="com.ue.rpc.server.client"></context:component-scan>
        
-       <context:property-placeholder location="classpath:rpc.propertis"/>
+       <context:property-placeholder location="classpath:rpc.properties"/>
        
-       <bean id="serviceRegistryServer" class="com.ue.rpc.registry.server.ServiceRegistryServer"></bean>
+       <bean id="serviceRegistryServer" class="com.ue.rpc.registry.server.ServiceRegistryServer">
+       		 <constructor-arg name="registryAddress" value="${registry.address}"/>
+       </bean>
        
         <bean id="rpcServer" class="com.ue.rpc.server.RpcServer">
        		 <constructor-arg name="serverAddress" value="${server.address}"/>

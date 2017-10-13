@@ -47,5 +47,8 @@
     	<module>rpc-registry-server</module>
     	<module>rpc-client-server-interface</module>
     	<module>rpc-server</module>
+    	<module>rpc-app-client</module>
+    	<module>rpc-registry-client</module>
+    	<module>rpc-client</module>
     </modules>
 </project>

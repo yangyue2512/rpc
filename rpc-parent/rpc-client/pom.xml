@@ -5,8 +5,7 @@
     <artifactId>rpc-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>rpc-registry-server</artifactId>
-  
+  <artifactId>rpc-client</artifactId>
   <dependencies>
         <!-- SLF4J -->
         <dependency>
@@ -14,19 +13,25 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.7</version>
         </dependency>
-        <!-- ZooKeeper -->
+        <!-- Netty -->
         <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>3.4.5</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.24.Final</version>
         </dependency>
-        
-        <!-- rpc common -->
+        <!-- RPC Common -->
         <dependency>
             <groupId>com.ue</groupId>
             <artifactId>rpc-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!-- RPC Registry -->
+        <dependency>
+            <groupId>com.ue</groupId>
+            <artifactId>rpc-registry-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+  
   
 </project>

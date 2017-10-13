@@ -1,4 +1,4 @@
-package com.ue.rpc.registry.server;
+package com.ue.rpc.constant;
 
 /**
  * 常量参数

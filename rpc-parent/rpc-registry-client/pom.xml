@@ -5,9 +5,8 @@
     <artifactId>rpc-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>rpc-registry-server</artifactId>
-  
-  <dependencies>
+  <artifactId>rpc-registry-client</artifactId>
+   <dependencies>
         <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -21,12 +20,14 @@
             <version>3.4.5</version>
         </dependency>
         
-        <!-- rpc common -->
+         <!-- rpc common -->
         <dependency>
             <groupId>com.ue</groupId>
             <artifactId>rpc-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        
     </dependencies>
+  
   
 </project>
