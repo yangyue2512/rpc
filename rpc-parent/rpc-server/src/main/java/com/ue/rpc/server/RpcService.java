@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 import org.springframework.stereotype.Component;
 
 /**
- * RPC 请求注解  (标记在服务实现类上)
+ * RPC 自定义注解  (标记在服务实现类上)
  * @ClassName: RpcService 
  * @author yangyue
  * @date 2017年10月12日 下午2:33:01 
