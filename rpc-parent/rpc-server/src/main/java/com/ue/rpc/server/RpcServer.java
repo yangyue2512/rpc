@@ -34,7 +34,7 @@ import com.ue.rpc.registry.server.ServiceRegistryServer;
  * spring构造本对象会调用setApplicationContext()方法，从而可以通过自定义注解获得用户的业务接口和实现
  * 还会调用afterPropertiesSet()方法，在方法中启动netty服务器
  * @ClassName: RpcServer 
- * @author yangyue
+ * @author yangyue 这是一个example
  * @date 2017年10月12日 下午1:59:30 
  *
  */

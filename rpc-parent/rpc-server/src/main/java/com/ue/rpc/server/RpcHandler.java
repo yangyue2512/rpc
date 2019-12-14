@@ -18,7 +18,7 @@ import com.ue.rpc.common.RpcResponse;
  * 通过构造时出入的 业务接口及实现 handlerMap 来调用客户端所请求的业务方法
  * 并将业务返回值封装成response对象传入下一个handler 
  * @ClassName: RpcHandler 
- * @author yangyue
+ * @author yangyue 1111111111
  * @date 2017年10月12日 下午3:15:01 
  *
  */
@@ -40,7 +40,7 @@ public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest>{
 		RpcResponse response = new RpcResponse();
 		response.setRequestId(request.getRequestId());
 		
-		//根据request来处理具体的业务调用
+		//根据request来处理具体的业务调用  1
 		try {
 			Object result = handle(request);
 			response.setResult(result);
